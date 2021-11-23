@@ -15,22 +15,14 @@ const connection = mysql.createConnection({
     user: 'root',
 
     // Your password
-    password: 'PlacePassWordHere',
+    password: 'root',
     database: 'employeesDB'
 });
 
 connection.connect(function (err) {
     if (err) throw err;
     console.log("connected as id " + connection.threadId);
-    console.log(`
-    ╔═══╗─────╔╗──────────────╔═╗╔═╗
-    ║╔══╝─────║║──────────────║║╚╝║║
-    ║╚══╦╗╔╦══╣║╔══╦╗─╔╦══╦══╗║╔╗╔╗╠══╦═╗╔══╦══╦══╦═╗
-    ║╔══╣╚╝║╔╗║║║╔╗║║─║║║═╣║═╣║║║║║║╔╗║╔╗╣╔╗║╔╗║║═╣╔╝
-    ║╚══╣║║║╚╝║╚╣╚╝║╚═╝║║═╣║═╣║║║║║║╔╗║║║║╔╗║╚╝║║═╣║
-    ╚═══╩╩╩╣╔═╩═╩══╩═╗╔╩══╩══╝╚╝╚╝╚╩╝╚╩╝╚╩╝╚╩═╗╠══╩╝
-    ───────║║──────╔═╝║─────────────────────╔═╝║
-    ───────╚╝──────╚══╝─────────────────────╚══╝`)
+    console.log(`Welcome to the employee tracker system`)
     // runs the app
     firstPrompt();
 });
